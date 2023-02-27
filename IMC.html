@@ -1,0 +1,40 @@
+<meta charset="UTF-8">
+
+<script>
+
+function pulaLinha () {
+    document.write("<br><br>");
+
+}
+
+function mostraFrase (mostraFrase) {
+    document.write (mostraFrase);
+    pulaLinha();
+}
+
+//Aprendendo a usar o return com o IMC e com o prompt
+
+function imcCalculado() {
+    var imc = pesoInformado / (alturaInformada*alturaInformada);
+    return imc
+}
+
+var nome = prompt ("Informe o seu nome");
+var pesoInformado = prompt(nome + ", informe o seu peso ");
+var alturaInformada = prompt(nome + ", informe a sua altura ");
+
+mostraFrase(nome + ", o seu IMC é  " + imcCalculado());
+
+if (imcCalculado() < 18.5) {
+    mostraFrase("O seu IMC está abaixo do recomendado");
+} 
+
+if (imcCalculado() > 35){
+   mostraFrase("O seu IMC está acima do recomendado");
+}
+
+if (imcCalculado() >= 18.5 && imcCalculado() <=35){
+    mostraFrase("O seu IMC está excelente");
+}
+
+</script>

@@ -1,0 +1,32 @@
+<meta charset="UTF-8">
+
+<script>
+
+function pulaLinha () {
+    document.write("<br><br>");
+
+}
+
+function mostraFrase (mostraFrase) {
+    document.write (mostraFrase);
+    pulaLinha();
+}
+
+function sorteia (n) {
+   return n = Math.round(Math.random()*n);
+}
+
+var numeroSorteado = sorteia(10);
+var chute = parseInt(prompt("Digite um número de 0 a 10"));
+
+if (chute == numeroSorteado) {
+    mostraFrase("Você acertou!");
+}else { 
+    if (numeroSorteado > chute) {
+        mostraFrase ("Você errou, o número sorteado é maior que o seu chute!");
+    } 
+    else {
+        mostraFrase("Você errou, o número sorteado é menor que o seu chute!");
+    }
+}
+</script>
